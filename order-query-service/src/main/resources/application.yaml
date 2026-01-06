@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: order-query-service
+
+  kafka:
+    consumer:
+      group-id: ${spring.application.name}
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: com.keniu
+
+server:
+  port: 8081

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: order-command-service
+
+  kafka:
+    producer:
+      group-id: ${spring.application.name}
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
